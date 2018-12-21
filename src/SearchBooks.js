@@ -25,10 +25,16 @@ class SearchBooks extends Component {
 
     this.timer = setTimeout(() => {
       BooksAPI.search(query, 20).then((books) => {
-
+        if(!Array.isArray(books)){
+          console.log('no books')
+          this.setState({ books: [] });
+          return false;
+        }
         books.forEach((book) => {
           if (BooksShelf[book.id]) {
             book.shelf = BooksShelf[book.id];
+          }else{
+            book.shelf = 'noBook'
           }
         });
 
