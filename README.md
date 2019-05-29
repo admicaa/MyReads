@@ -1,6 +1,7 @@
 # MyReads Project
 this project helps you to organize your reading plans by filtering books.
 this is my implementation project for Udacity's React Fundamentals course.
+this is my implementation project for Udacity's React Fundamentals course.
 ## Dependencies
 * raectjs
 * react-dom
